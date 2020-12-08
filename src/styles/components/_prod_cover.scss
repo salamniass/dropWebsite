@@ -1,0 +1,42 @@
+#prod__cover {
+  // min-height: 80vh;
+  background-color: $whiteColor;
+  background-image: url("img/girl.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  @include respond(tab-port) {
+    background-size: 105% !important;
+    background-position: bottom center;
+  }
+
+  .row__inner {
+    display: flex;
+    align-items: center;
+    min-height: 60rem;
+    margin-left: auto;
+    justify-content: flex-end;
+
+    @include respond(tab-port) {
+      align-items: flex-end;
+      min-height: 45rem;
+    }
+
+    &__content {
+      max-width: 50rem;
+      font-size: 2.4rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 5px;
+      margin-right: 10rem;
+      box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+      line-height: 1.5;
+      @include respond(tab-port) {
+        font-size: 1.3rem;
+        margin-bottom: 4rem;
+        margin-right: 5rem;
+        padding: 1rem;
+      }
+    }
+  }
+}

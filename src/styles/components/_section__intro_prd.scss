@@ -1,0 +1,94 @@
+#intro_prd {
+  background-color: $greyColor;
+  color: $darkBlack;
+  position: relative;
+  backface-visibility: hidden;
+
+  // Animation text
+  h1.prod__title {
+    animation: moveInLeft 1s ease-out;
+  }
+  .prod__text--intro {
+    animation: moveInBottom 1s ease-out;
+  }
+
+  .row__inner {
+    height: 80vh;
+    display: flex;
+    align-items: stretch;
+    @include respond(tab-port) {
+      flex-direction: column;
+      height: 90vh;
+      align-content: space-between;
+    }
+    .col-2-of-3 {
+      display: flex;
+      align-items: center;
+      @include respond(tab-port) {
+        align-items: flex-end;
+        height: 60vh !important;
+      }
+    }
+
+    .col-1-of-3 {
+      display: flex;
+      align-items: flex-end;
+      // background-color: yellow;
+      .row__inner--prod {
+        margin-bottom: 5rem;
+      }
+      .row__inner--prod img {
+        width: 100%;
+        max-width: 100%;
+        animation-name: animateIndefinite;
+        animation-duration: 2.8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-delay: 0.8s;
+        @include respond(tab-port) {
+          width: 60% !important;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+#compate {
+  background-color: $darkBlack;
+  min-height: 14rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  background-image: url("img/bg_section_dark.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+  @include respond(tab-port) {
+    min-height: 10rem;
+  }
+
+  @include respond(phone) {
+    background-size: 1;
+    min-height: 9rem;
+    background-image: url("img/bg_mobile.jpg");
+    background-size: contain;
+    background-position: left center;
+  }
+
+  .row__inner {
+    h3 {
+      font-size: 3rem;
+      font-weight: 300;
+      max-width: 40rem;
+      text-align: center;
+      @include respond(tab-port) {
+        font-size: 1.7rem;
+        max-width: 90%;
+        margin-left: 10rem;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
